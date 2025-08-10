@@ -2,47 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-10T20:17:31 EEST" name="Default suite" finished-at="2025-08-10T20:18:22 EEST" duration-ms="50787">
+  <suite started-at="2025-08-10T20:52:04 EEST" name="Default suite" finished-at="2025-08-10T20:52:27 EEST" duration-ms="23932">
     <groups>
     </groups>
-    <test started-at="2025-08-10T20:17:31 EEST" name="Default test" finished-at="2025-08-10T20:18:22 EEST" duration-ms="50787">
-      <class name="testCases.TestCase4">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:testCases.TestCase4@1c1bbc4e]" started-at="2025-08-10T20:17:31 EEST" name="openBrowser" finished-at="2025-08-10T20:17:46 EEST" duration-ms="15050" status="PASS">
+    <test started-at="2025-08-10T20:52:04 EEST" name="Default test" finished-at="2025-08-10T20:52:27 EEST" duration-ms="23932">
+      <class name="testCases.TestCase7">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:testCases.TestCase7@3cd3e762]" started-at="2025-08-10T20:52:04 EEST" name="openBrowser" finished-at="2025-08-10T20:52:21 EEST" duration-ms="17116" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="loginAndLogout(java.lang.String,java.lang.String)[pri:0, instance:testCases.TestCase4@1c1bbc4e]" started-at="2025-08-10T20:17:46 EEST" name="loginAndLogout" data-provider="validCredentials" finished-at="2025-08-10T20:18:22 EEST" duration-ms="35586" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[antoinemageud@icloud.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[111]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="verifyTestCasesNavigation()[pri:0, instance:testCases.TestCase7@3cd3e762]" started-at="2025-08-10T20:52:21 EEST" name="verifyTestCasesNavigation" finished-at="2025-08-10T20:52:27 EEST" duration-ms="6673" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginAndLogout -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:testCases.TestCase4@1c1bbc4e]" started-at="2025-08-10T20:18:22 EEST" name="takeScreenShot" finished-at="2025-08-10T20:18:22 EEST" duration-ms="1" status="PASS">
+        </test-method> <!-- verifyTestCasesNavigation -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:testCases.TestCase7@3cd3e762]" started-at="2025-08-10T20:52:27 EEST" name="takeScreenShot" finished-at="2025-08-10T20:52:27 EEST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginAndLogout status=SUCCESS method=TestCase4.loginAndLogout(java.lang.String,java.lang.String)[pri:0, instance:testCases.TestCase4@1c1bbc4e] output={null}]]]>
+                <![CDATA[[TestResult name=verifyTestCasesNavigation status=SUCCESS method=TestCase7.verifyTestCasesNavigation()[pri:0, instance:testCases.TestCase7@3cd3e762] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testCases.TestCase4@1c1bbc4e]" started-at="2025-08-10T20:18:22 EEST" name="closeBrowser" finished-at="2025-08-10T20:18:22 EEST" duration-ms="127" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testCases.TestCase7@3cd3e762]" started-at="2025-08-10T20:52:27 EEST" name="closeBrowser" finished-at="2025-08-10T20:52:27 EEST" duration-ms="120" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- testCases.TestCase4 -->
+      </class> <!-- testCases.TestCase7 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

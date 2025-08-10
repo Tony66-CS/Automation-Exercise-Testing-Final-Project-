@@ -27,6 +27,16 @@ public class HomePage extends PageBase{
     @FindBy(xpath = "//h2[text()='Features Items']")
     public WebElement featuresItemsHeader; 
     
+	@FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[5]/a")
+    private WebElement testCasesBtn;
+	
+
+	public void openTestCasesPage() {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    wait.until(ExpectedConditions.elementToBeClickable(testCasesBtn));
+	    testCasesBtn.click();
+	}
+    
     public void openLoginPage() {
     	
     	wait.until(ExpectedConditions.elementToBeClickable(loginLink));
