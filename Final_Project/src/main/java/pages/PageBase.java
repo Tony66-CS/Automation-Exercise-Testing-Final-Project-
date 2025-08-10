@@ -1,4 +1,4 @@
-package Automation_Exercise.Final_Project;
+package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
