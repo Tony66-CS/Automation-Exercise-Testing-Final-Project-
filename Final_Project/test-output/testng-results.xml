@@ -2,47 +2,47 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-10T20:05:27 EEST" name="Default suite" finished-at="2025-08-10T20:06:23 EEST" duration-ms="56518">
+  <suite started-at="2025-08-10T20:17:31 EEST" name="Default suite" finished-at="2025-08-10T20:18:22 EEST" duration-ms="50787">
     <groups>
     </groups>
-    <test started-at="2025-08-10T20:05:27 EEST" name="Default test" finished-at="2025-08-10T20:06:23 EEST" duration-ms="56518">
-      <class name="testCases.TestCase3">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:testCases.TestCase3@1c1bbc4e]" started-at="2025-08-10T20:05:27 EEST" name="openBrowser" finished-at="2025-08-10T20:05:42 EEST" duration-ms="15508" status="PASS">
+    <test started-at="2025-08-10T20:17:31 EEST" name="Default test" finished-at="2025-08-10T20:18:22 EEST" duration-ms="50787">
+      <class name="testCases.TestCase4">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:testCases.TestCase4@1c1bbc4e]" started-at="2025-08-10T20:17:31 EEST" name="openBrowser" finished-at="2025-08-10T20:17:46 EEST" duration-ms="15050" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="loginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:testCases.TestCase3@1c1bbc4e]" started-at="2025-08-10T20:05:42 EEST" name="loginWithInvalidCredentials" data-provider="invalidCredentials" finished-at="2025-08-10T20:06:23 EEST" duration-ms="40862" status="PASS">
+        <test-method signature="loginAndLogout(java.lang.String,java.lang.String)[pri:0, instance:testCases.TestCase4@1c1bbc4e]" started-at="2025-08-10T20:17:46 EEST" name="loginAndLogout" data-provider="validCredentials" finished-at="2025-08-10T20:18:22 EEST" duration-ms="35586" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[wrongEmail1@example.com]]>
+                <![CDATA[antoinemageud@icloud.com]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[wrongPass1]]>
+                <![CDATA[111]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginWithInvalidCredentials -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:testCases.TestCase3@1c1bbc4e]" started-at="2025-08-10T20:06:23 EEST" name="takeScreenShot" finished-at="2025-08-10T20:06:23 EEST" duration-ms="1" status="PASS">
+        </test-method> <!-- loginAndLogout -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:testCases.TestCase4@1c1bbc4e]" started-at="2025-08-10T20:18:22 EEST" name="takeScreenShot" finished-at="2025-08-10T20:18:22 EEST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginWithInvalidCredentials status=SUCCESS method=TestCase3.loginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:testCases.TestCase3@1c1bbc4e] output={null}]]]>
+                <![CDATA[[TestResult name=loginAndLogout status=SUCCESS method=TestCase4.loginAndLogout(java.lang.String,java.lang.String)[pri:0, instance:testCases.TestCase4@1c1bbc4e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testCases.TestCase3@1c1bbc4e]" started-at="2025-08-10T20:06:23 EEST" name="closeBrowser" finished-at="2025-08-10T20:06:23 EEST" duration-ms="126" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testCases.TestCase4@1c1bbc4e]" started-at="2025-08-10T20:18:22 EEST" name="closeBrowser" finished-at="2025-08-10T20:18:22 EEST" duration-ms="127" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- testCases.TestCase3 -->
+      </class> <!-- testCases.TestCase4 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

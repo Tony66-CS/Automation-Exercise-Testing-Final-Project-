@@ -24,6 +24,14 @@ public class UserHomePage extends PageBase{
     public WebElement DeleteAccBtn;
 
     
+    @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a")
+    public WebElement logoutBtn;
+
+    public void logout() {
+        wait.until(ExpectedConditions.elementToBeClickable(logoutBtn));
+        logoutBtn.click();
+    }
+    
     public void DeleteAccount() {
     
     	wait.until(ExpectedConditions.elementToBeClickable(DeleteAccBtn));
