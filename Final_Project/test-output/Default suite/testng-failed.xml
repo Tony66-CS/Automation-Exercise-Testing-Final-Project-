@@ -8,7 +8,7 @@
           <include name="takeScreenShot"/>
           <include name="closeBrowser"/>
           <include name="openBrowser"/>
-          <include name="loginUserWithIncorrectEmailAndPassword" invocation-numbers="0"/>
+          <include name="loginWithInvalidCredentials" invocation-numbers="1"/>
         </methods>
       </class> <!-- testCases.TestCase3 -->
     </classes>
