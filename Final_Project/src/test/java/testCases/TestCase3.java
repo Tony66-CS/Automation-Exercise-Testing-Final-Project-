@@ -46,7 +46,7 @@ public class TestCase3 extends TestBase {
 
         // Step 6: Verify error message
         
-        Assert.assertTrue(
+        Assert.assertTrue( //...
                
               loginPage.loginfailedmsg.isDisplayed()
         );
