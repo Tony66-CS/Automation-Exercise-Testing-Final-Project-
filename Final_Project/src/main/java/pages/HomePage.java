@@ -30,6 +30,8 @@ public class HomePage extends PageBase{
 	@FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[5]/a")
     private WebElement testCasesBtn;
 	
+	@FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[2]/a")
+	private WebElement productsBtn;
 
 	public void openTestCasesPage() {
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -37,6 +39,12 @@ public class HomePage extends PageBase{
 	    testCasesBtn.click();
 	}
     
+	public void openProductPage() {
+    	
+    	wait.until(ExpectedConditions.elementToBeClickable(productsBtn));
+    	productsBtn.click();
+    }
+	
     public void openLoginPage() {
     	
     	wait.until(ExpectedConditions.elementToBeClickable(loginLink));
