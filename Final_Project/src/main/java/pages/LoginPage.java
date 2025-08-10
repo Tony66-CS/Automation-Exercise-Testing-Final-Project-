@@ -20,7 +20,8 @@ public class LoginPage extends PageBase{
 	
 	@FindBy(xpath = "//*[@id=\"form\"]/div/div/div[1]/div/form/button")
 	WebElement loginBtn;
-	
+	@FindBy(xpath = "//*[@id=\"form\"]/div/div/div[1]/div/form/p")
+	 public WebElement loginfailedmsg;
 	public void setEmail(String emailText) {
         email.clear();
         email.sendKeys(emailText);
