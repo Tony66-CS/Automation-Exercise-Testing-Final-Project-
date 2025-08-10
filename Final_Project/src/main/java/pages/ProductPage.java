@@ -21,6 +21,35 @@ public class ProductPage extends PageBase {
     @FindBy(xpath = "(//a[contains(text(),'View Product')])[1]")
     public WebElement firstProductViewLink;
 
+//    @FindBy(xpath = "//h2[text()='All Products']")
+//    public WebElement allProductsTitle;
+
+    @FindBy(id = "search_product")
+    WebElement searchInput;
+
+    @FindBy(id = "submit_search")
+    WebElement searchButton;
+
+    @FindBy(xpath = "/html/body/section[2]/div/div/div[2]/div/h2")
+    public WebElement searchedProductsTitle;
+
+    @FindBy(xpath = "/html/body/section[2]/div/div/div[2]/div")
+    public List<WebElement> searchedProductsList;
+
+    public void waitForAllProductss() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOf(allProductsTitle));
+    }
+
+    public void enterSearchKeyword(String keyword) {
+        searchInput.clear();
+        searchInput.sendKeys(keyword);
+    }
+
+    public void clickSearchButton() {
+        searchButton.click();
+    }
+    
     public void waitForAllProducts() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(allProductsTitle));

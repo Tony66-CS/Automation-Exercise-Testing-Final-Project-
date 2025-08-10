@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-10T21:15:25 EEST" name="Default suite" finished-at="2025-08-10T21:15:55 EEST" duration-ms="30118">
+  <suite started-at="2025-08-10T21:24:43 EEST" name="Default suite" finished-at="2025-08-10T21:25:14 EEST" duration-ms="30618">
     <groups>
     </groups>
-    <test started-at="2025-08-10T21:15:25 EEST" name="Default test" finished-at="2025-08-10T21:15:55 EEST" duration-ms="30118">
-      <class name="testCases.TestCase8">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:testCases.TestCase8@3cd3e762]" started-at="2025-08-10T21:15:25 EEST" name="openBrowser" finished-at="2025-08-10T21:15:40 EEST" duration-ms="15420" status="PASS">
+    <test started-at="2025-08-10T21:24:43 EEST" name="Default test" finished-at="2025-08-10T21:25:14 EEST" duration-ms="30618">
+      <class name="testCases.TestCase9">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:testCases.TestCase9@62ddbd7e]" started-at="2025-08-10T21:24:43 EEST" name="openBrowser" finished-at="2025-08-10T21:25:01 EEST" duration-ms="17517" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="viewFirstProductDetails()[pri:0, instance:testCases.TestCase8@3cd3e762]" started-at="2025-08-10T21:15:40 EEST" name="viewFirstProductDetails" finished-at="2025-08-10T21:15:55 EEST" duration-ms="14574" status="PASS">
+        <test-method signature="searchProductAndVerifyResults()[pri:0, instance:testCases.TestCase9@62ddbd7e]" started-at="2025-08-10T21:25:01 EEST" name="searchProductAndVerifyResults" finished-at="2025-08-10T21:25:14 EEST" duration-ms="12854" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- viewFirstProductDetails -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:testCases.TestCase8@3cd3e762]" started-at="2025-08-10T21:15:55 EEST" name="takeScreenShot" finished-at="2025-08-10T21:15:55 EEST" duration-ms="1" status="PASS">
+        </test-method> <!-- searchProductAndVerifyResults -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:testCases.TestCase9@62ddbd7e]" started-at="2025-08-10T21:25:14 EEST" name="takeScreenShot" finished-at="2025-08-10T21:25:14 EEST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=viewFirstProductDetails status=SUCCESS method=TestCase8.viewFirstProductDetails()[pri:0, instance:testCases.TestCase8@3cd3e762] output={null}]]]>
+                <![CDATA[[TestResult name=searchProductAndVerifyResults status=SUCCESS method=TestCase9.searchProductAndVerifyResults()[pri:0, instance:testCases.TestCase9@62ddbd7e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testCases.TestCase8@3cd3e762]" started-at="2025-08-10T21:15:55 EEST" name="closeBrowser" finished-at="2025-08-10T21:15:55 EEST" duration-ms="105" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testCases.TestCase9@62ddbd7e]" started-at="2025-08-10T21:25:14 EEST" name="closeBrowser" finished-at="2025-08-10T21:25:14 EEST" duration-ms="227" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- testCases.TestCase8 -->
+      </class> <!-- testCases.TestCase9 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
