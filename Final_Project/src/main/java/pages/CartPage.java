@@ -39,15 +39,19 @@ public class CartPage extends PageBase {
 
     @FindBy(xpath = "//*[@id=\"cartModal\"]/div/div/div[2]/p[2]/a")
     public WebElement viewCartBtn;
-
-    @FindBy(xpath = "//*[@id=\"cart_items\"]/div/div[1]/ol/li[2]")
-    public WebElement cartTitle2;
     
     @FindBy(xpath = "//*[@id=\"do_action\"]/div[1]/div/div/a")
     private WebElement proceedToCheckout;
     
     @FindBy(xpath = "//*[@id=\"checkoutModal\"]/div/div/div[2]/p[2]/a/u")
     private WebElement RegisterBtn;
+    
+    @FindBy(xpath = "//*[@id=\"product-1\"]/td[6]/a")
+    private List<WebElement> DeleteItemBtn;
+    
+    @FindBy(xpath = "//*[@id=\"empty_cart\"]/p")
+    public WebElement CartisEmpty;
+    
     
     public boolean isProductInCart(String productName) {
         for (WebElement row : cartRows) {
@@ -95,4 +99,16 @@ public class CartPage extends PageBase {
 
     }
     
+    public int getProductCounttobeDeleted() {
+        return DeleteItemBtn.size();
+    }
+
+    public void removeProduct(int index) {
+    	DeleteItemBtn.get(index).click();
+    }
+    
+    public void waitForEmptyCart() {
+        new WebDriverWait(driver, Duration.ofSeconds(5))
+            .until(ExpectedConditions.visibilityOf(CartisEmpty));
+    }
 }
