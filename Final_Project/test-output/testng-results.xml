@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-12T18:35:04 EEST" name="Default suite" finished-at="2025-08-12T18:36:33 EEST" duration-ms="89020">
+  <suite started-at="2025-08-12T18:46:08 EEST" name="Default suite" finished-at="2025-08-12T18:47:28 EEST" duration-ms="80282">
     <groups>
     </groups>
-    <test started-at="2025-08-12T18:35:04 EEST" name="Default test" finished-at="2025-08-12T18:36:33 EEST" duration-ms="89020">
-      <class name="testCases.TestCase14">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:testCases.TestCase14@24269709]" started-at="2025-08-12T18:35:04 EEST" name="openBrowser" finished-at="2025-08-12T18:35:26 EEST" duration-ms="21219" status="PASS">
+    <test started-at="2025-08-12T18:46:08 EEST" name="Default test" finished-at="2025-08-12T18:47:28 EEST" duration-ms="80282">
+      <class name="testCases.TestCase15">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:testCases.TestCase15@24269709]" started-at="2025-08-12T18:46:08 EEST" name="openBrowser" finished-at="2025-08-12T18:46:25 EEST" duration-ms="16748" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="placeOrderRegisterWhileCheckout(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TestCase14@24269709]" started-at="2025-08-12T18:35:26 EEST" name="placeOrderRegisterWhileCheckout" data-provider="dp" finished-at="2025-08-12T18:36:33 EEST" duration-ms="67598" status="PASS">
+        <test-method signature="placeOrderRegisterBeforeCheckout(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TestCase15@24269709]" started-at="2025-08-12T18:46:25 EEST" name="placeOrderRegisterBeforeCheckout" data-provider="dp" finished-at="2025-08-12T18:47:28 EEST" duration-ms="63327" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -91,23 +91,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- placeOrderRegisterWhileCheckout -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:testCases.TestCase14@24269709]" started-at="2025-08-12T18:36:33 EEST" name="takeScreenShot" finished-at="2025-08-12T18:36:33 EEST" duration-ms="4" status="PASS">
+        </test-method> <!-- placeOrderRegisterBeforeCheckout -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:testCases.TestCase15@24269709]" started-at="2025-08-12T18:47:28 EEST" name="takeScreenShot" finished-at="2025-08-12T18:47:28 EEST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=placeOrderRegisterWhileCheckout status=SUCCESS method=TestCase14.placeOrderRegisterWhileCheckout(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TestCase14@24269709] output={null}]]]>
+                <![CDATA[[TestResult name=placeOrderRegisterBeforeCheckout status=SUCCESS method=TestCase15.placeOrderRegisterBeforeCheckout(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TestCase15@24269709] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testCases.TestCase14@24269709]" started-at="2025-08-12T18:36:33 EEST" name="closeBrowser" finished-at="2025-08-12T18:36:33 EEST" duration-ms="170" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testCases.TestCase15@24269709]" started-at="2025-08-12T18:47:28 EEST" name="closeBrowser" finished-at="2025-08-12T18:47:28 EEST" duration-ms="176" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- testCases.TestCase14 -->
+      </class> <!-- testCases.TestCase15 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
