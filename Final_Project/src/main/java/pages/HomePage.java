@@ -75,7 +75,34 @@ public class HomePage extends PageBase{
 	@FindBy(xpath = "/html/body/section/div/div[2]/div[2]/div/h2")
 	public WebElement TShirtsMsg;
 	
-	
+	//
+	@FindBy(xpath = "//*[text()='recommended items']")
+    private WebElement recommendedItemsTitle;
+
+    @FindBy(xpath = "//*[@id='recommended-item-carousel']//a[contains(text(),'Add to cart')]")
+    private WebElement firstRecommendedAddToCart;
+
+    @FindBy(xpath = "//u[text()='View Cart']")
+    private WebElement viewCartButton;
+
+    public void scrollToRecommendedItems() {
+        wait.withTimeout(Duration.ofSeconds(10))
+            .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[text()='recommended items']")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", recommendedItemsTitle);
+    }
+
+    public boolean isRecommendedItemsVisible() {
+        return recommendedItemsTitle.isDisplayed();
+    }
+
+    public void clickAddToCartRecommended() {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", firstRecommendedAddToCart);
+    }
+
+    public void clickViewCart() {
+        wait.until(ExpectedConditions.elementToBeClickable(viewCartButton)).click();
+    }
+	//
 	
 	public void clickFirstViewProduct() {
 		wait.until(ExpectedConditions.visibilityOf(VuewProduct1));

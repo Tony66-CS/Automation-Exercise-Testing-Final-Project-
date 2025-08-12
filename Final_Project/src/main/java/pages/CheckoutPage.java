@@ -55,6 +55,22 @@ public class CheckoutPage extends PageBase{
     @FindBy(xpath = "//*[@id=\"form\"]/div/div/div/h2/b")
     public WebElement orderSuccessMsg;
 
+    @FindBy(xpath = "//ul[@id='address_delivery']")
+    private WebElement deliveryAddressBox;
+
+    @FindBy(xpath = "//ul[@id='address_invoice']")
+    private WebElement billingAddressBox;
+
+
+    public String getDeliveryAddress() {
+        return deliveryAddressBox.getText();
+    }
+
+    public String getBillingAddress() {
+        return billingAddressBox.getText();
+    }
+
+    
     
     public boolean isAddressDetailsVisible() {
         return addressDetailsSection.isDisplayed();

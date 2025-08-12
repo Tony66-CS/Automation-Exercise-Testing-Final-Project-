@@ -50,8 +50,9 @@ public class ProductPage extends PageBase {
     @FindBy(xpath = "//*[@id=\"cartModal\"]/div/div/div[2]/p[2]/a/u")
     public WebElement viewCartBtn;
 
+    @FindBy(css = ".add-to-cart")
+    private List<WebElement> addToCartButtons;
     
-    // More robust brand element locators
     @FindBy(xpath = "//h2[contains(text(),'Brands') or contains(text(),'brands')]")
     public WebElement BrandLabel;
 
@@ -71,6 +72,49 @@ public class ProductPage extends PageBase {
     @FindBy(xpath = "//div[@class='features_items']//h2")
     public WebElement Brand2Msg;
     
+    @FindBy(xpath = "/html/body/section[2]/div/div/div[2]/div/h2")
+    public WebElement AllproductsMsg;
+    
+    @FindBy(css = ".productinfo.text-center")
+    private List<WebElement> productList;
+
+    //ttt
+    
+
+    @FindBy(xpath = "//*[@id='name']")
+    private WebElement reviewNameInput;
+
+    @FindBy(xpath = "//*[@id='email']")
+    private WebElement reviewEmailInput;
+
+    @FindBy(xpath = "textarea#review")
+    private WebElement reviewTextArea;
+
+    @FindBy(id = "button-review")
+    private WebElement submitReviewButton;
+
+    @FindBy(xpath = "//*[contains(text(),'Thank you for your review.')]")
+    private WebElement reviewSuccessMessage;
+
+    public boolean isWriteReviewVisible() {
+        return reviewNameInput.isDisplayed() && reviewEmailInput.isDisplayed() && reviewTextArea.isDisplayed();
+    }
+
+    public void enterReviewDetails(String name, String email, String review) {
+        wait.until(ExpectedConditions.visibilityOf(reviewNameInput)).sendKeys(name);
+        reviewEmailInput.sendKeys(email);
+        reviewTextArea.sendKeys(review);
+    }
+
+    public void clickSubmitReview() {
+        wait.until(ExpectedConditions.elementToBeClickable(submitReviewButton)).click();
+    }
+
+    public boolean isReviewSuccessMessageDisplayed() {
+        return wait.until(ExpectedConditions.visibilityOf(reviewSuccessMessage)).isDisplayed();
+    }
+    
+    //ttt
     public void hoverAndAddToCart(int productIndex) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement product = productsList.get(productIndex);
@@ -186,7 +230,20 @@ public class ProductPage extends PageBase {
         }
     }
     
-    // Debug method to print available brand information
+    public boolean areAllSearchResultsVisible() {
+        wait.until(ExpectedConditions.visibilityOfAllElements(productList));
+        return productList.stream().allMatch(WebElement::isDisplayed);
+    }
+    
+    public void addAllSearchResultsToCart() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        for (WebElement product : addToCartButtons) {
+            js.executeScript("arguments[0].scrollIntoView(true);", product);
+            js.executeScript("arguments[0].click();", product);
+            wait.until(ExpectedConditions.elementToBeClickable(continueShoppingBtn)).click();
+        }
+    }
+    
     public void printBrandDebugInfo() {
         System.out.println("=== Brand Debug Information ===");
         System.out.println("BrandLabel found: " + (BrandLabel != null));
@@ -208,7 +265,6 @@ public class ProductPage extends PageBase {
                 System.out.println("Error getting brand " + (i + 1) + " info: " + e.getMessage());
             }
         }
-        System.out.println("===============================");
     }
     
 }

@@ -43,7 +43,47 @@ public class ProductDetailPage extends PageBase{
     
     @FindBy(xpath = "//*[@id=\"cartModal\"]/div/div/div[2]/p[2]/a/u")
     private WebElement viewCartLink;
+    
+    @FindBy(xpath = "/html/body/section/div/div/div[2]/div[3]/div[1]/ul/li/a")
+    public WebElement reviewMsg;
 
+//new
+    
+    @FindBy(xpath = "//*[@id='name']")
+    private WebElement reviewNameInput;
+
+    @FindBy(xpath = "//*[@id='email']")
+    private WebElement reviewEmailInput;
+
+    @FindBy(xpath = "//*[@id=\"review\"]")
+    private WebElement reviewTextArea;
+
+    @FindBy(id = "button-review")
+    private WebElement submitReviewButton;
+
+    @FindBy(xpath = "//*[contains(text(),'Thank you for your review.')]")
+    private WebElement reviewSuccessMessage;
+
+    public boolean isWriteReviewVisible() {
+        return reviewNameInput.isDisplayed() && reviewEmailInput.isDisplayed() && reviewTextArea.isDisplayed();
+    }
+
+    public void enterReviewDetails(String name, String email, String review) {
+        wait.until(ExpectedConditions.visibilityOf(reviewNameInput)).sendKeys(name);
+        reviewEmailInput.sendKeys(email);
+        reviewTextArea.sendKeys(review);
+    }
+
+    public void clickSubmitReview() {
+        wait.until(ExpectedConditions.elementToBeClickable(submitReviewButton)).click();
+    }
+
+    public boolean isReviewSuccessMessageDisplayed() {
+        return wait.until(ExpectedConditions.visibilityOf(reviewSuccessMessage)).isDisplayed();
+    }
+    
+    //mxm
+    
     public void setProductQuantity(String qty) {
         quantityInput.clear();
         quantityInput.sendKeys(qty);

@@ -1,6 +1,7 @@
 package pages;
 
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -51,6 +52,10 @@ public class CartPage extends PageBase {
     
     @FindBy(xpath = "//*[@id=\"empty_cart\"]/p")
     public WebElement CartisEmpty;
+    
+    @FindBy(xpath = "//table[@id='cart_info_table']//tr")
+    public List<WebElement> cartItems;
+    
     
     
     public boolean isProductInCart(String productName) {
@@ -110,5 +115,22 @@ public class CartPage extends PageBase {
     public void waitForEmptyCart() {
         new WebDriverWait(driver, Duration.ofSeconds(5))
             .until(ExpectedConditions.visibilityOf(CartisEmpty));
+    }
+    
+    public boolean areProductsInCart() {
+        return cartItems.size() > 0 && cartItems.stream().allMatch(WebElement::isDisplayed);
+    }
+    
+    public boolean isProductInCartt(String productName) {
+    	 // Wait until at least one product row is loaded
+        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(
+            By.cssSelector("table.table tbody tr")
+        ));
+
+        // Get all product rows and check if any contains the given name
+        return driver.findElements(By.cssSelector("table.table tbody tr"))
+                     .stream()
+                     .anyMatch(row -> row.getText().toLowerCase().contains(productName.toLowerCase()));
+
     }
 }
