@@ -1,7 +1,10 @@
 package pages;
 
 import java.time.Duration;
+import java.util.List;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -51,6 +54,28 @@ public class HomePage extends PageBase{
 	@FindBy(xpath = "/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[2]/ul/li/a")
 	private WebElement VuewProduct1;
 	
+	@FindBy(xpath = "/html/body/section[2]/div/div/div[1]/div/h2")
+	public WebElement CategoryLabel;
+	
+	@FindBy(xpath = "//*[@id=\"accordian\"]/div[1]/div[1]/h4/a")
+	private WebElement WomenSelect;
+	
+	@FindBy(xpath = "//*[@id=\"accordian\"]/div[2]/div[1]/h4/a")
+	private WebElement MenSelect;
+	
+	@FindBy(xpath = "//*[@id='Women']/div/ul/li[1]/a")
+	private WebElement TopsSelect;
+	
+	@FindBy(xpath = "/html/body/section/div/div[2]/div[2]/div/h2")
+	public WebElement TopsMsg;
+	
+	@FindBy(xpath = "//*[@id='Men']/div/ul/li[1]/a")
+	private WebElement TShirtSelection;
+	
+	@FindBy(xpath = "/html/body/section/div/div[2]/div[2]/div/h2")
+	public WebElement TShirtsMsg;
+	
+	
 	
 	public void clickFirstViewProduct() {
 		wait.until(ExpectedConditions.visibilityOf(VuewProduct1));
@@ -92,6 +117,27 @@ public class HomePage extends PageBase{
     	cartBtn.click();
     }
     
+    public void openWomenCategoryAndClickTops() {
+    	wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='accordian']/div[1]/div[1]/h4/a")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", WomenSelect);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", WomenSelect);
+
+        WebElement dressLink = wait.until(ExpectedConditions.elementToBeClickable(
+            By.xpath("//*[@id='Women']/div/ul/li[2]/a"))); // adjust index for "Dress"
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", dressLink);
+    }
+    
+    public void openMenCategoryAndClickTShirts() {
+    	wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='accordian']/div[2]/div[1]/h4/a")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", MenSelect);
+        //Thread.sleep(500); // tiny pause for animation
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", MenSelect);
+
+        WebElement tshirtLink = wait.until(ExpectedConditions.elementToBeClickable(
+            By.xpath("//*[@id='Men']/div/ul/li[1]/a")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", tshirtLink);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", tshirtLink);
+    }
 
 	
 }
