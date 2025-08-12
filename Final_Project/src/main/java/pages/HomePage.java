@@ -33,8 +33,39 @@ public class HomePage extends PageBase{
 	@FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[2]/a")
 	private WebElement productsBtn;
 
+	@FindBy(xpath = "//*[@id=\"footer\"]/div[1]/div/div/div[2]/div/h2")
+	public WebElement Subscription;
+	
+	@FindBy(xpath = "//*[@id=\"susbscribe_email\"]")
+	private WebElement SubscriptionEmailField;
+	
+	@FindBy(id = "subscribe")
+	private WebElement SubscribeBtn;
+	
+	@FindBy(xpath = "//*[@id=\"success-subscribe\"]/div")
+	public WebElement SubscribtionMsg;
+	
+	@FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[3]/a")
+	private WebElement cartBtn;
+	
+	@FindBy(xpath = "/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[2]/ul/li/a")
+	private WebElement VuewProduct1;
+	
+	
+	public void clickFirstViewProduct() {
+		wait.until(ExpectedConditions.visibilityOf(VuewProduct1));
+		VuewProduct1.click();
+	}
+	public void sendSubscribtionEmail(String Email) {
+		
+		wait.until(ExpectedConditions.visibilityOf(SubscriptionEmailField));
+	    SubscriptionEmailField.clear();
+	    SubscriptionEmailField.sendKeys(Email);
+	    SubscribeBtn.click();
+		
+	}
+	
 	public void openTestCasesPage() {
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	    wait.until(ExpectedConditions.elementToBeClickable(testCasesBtn));
 	    testCasesBtn.click();
 	}
@@ -55,5 +86,12 @@ public class HomePage extends PageBase{
     	wait.until(ExpectedConditions.elementToBeClickable(homeLink));
         homeLink.click();
     }
+    
+    public void openCartPage() {
+    	wait.until(ExpectedConditions.elementToBeClickable(homeLink));
+    	cartBtn.click();
+    }
+    
+
 	
 }
