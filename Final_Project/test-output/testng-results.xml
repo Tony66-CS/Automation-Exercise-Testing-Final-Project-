@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-13T00:47:09 EEST" name="Default suite" finished-at="2025-08-13T00:47:36 EEST" duration-ms="27816">
+  <suite started-at="2025-08-13T03:04:46 EEST" name="Default suite" finished-at="2025-08-13T03:05:08 EEST" duration-ms="21633">
     <groups>
     </groups>
-    <test started-at="2025-08-13T00:47:09 EEST" name="Default test" finished-at="2025-08-13T00:47:36 EEST" duration-ms="27816">
-      <class name="testCases.TestCase22">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:testCases.TestCase22@6ed3ccb2]" started-at="2025-08-13T00:47:09 EEST" name="openBrowser" finished-at="2025-08-13T00:47:27 EEST" duration-ms="18480" status="PASS">
+    <test started-at="2025-08-13T03:04:46 EEST" name="Default test" finished-at="2025-08-13T03:05:08 EEST" duration-ms="21633">
+      <class name="testCases.TestCase26">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:testCases.TestCase26@6ed3ccb2]" started-at="2025-08-13T03:04:46 EEST" name="openBrowser" finished-at="2025-08-13T03:05:03 EEST" duration-ms="16746" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="testAddRecommendedItemToCart()[pri:0, instance:testCases.TestCase22@6ed3ccb2]" started-at="2025-08-13T00:47:27 EEST" name="testAddRecommendedItemToCart" finished-at="2025-08-13T00:47:36 EEST" duration-ms="9158" status="PASS">
+        <test-method signature="verifyScrollUpWithoutArrowButton()[pri:0, instance:testCases.TestCase26@6ed3ccb2]" started-at="2025-08-13T03:05:03 EEST" name="verifyScrollUpWithoutArrowButton" finished-at="2025-08-13T03:05:08 EEST" duration-ms="4768" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAddRecommendedItemToCart -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:testCases.TestCase22@6ed3ccb2]" started-at="2025-08-13T00:47:36 EEST" name="takeScreenShot" finished-at="2025-08-13T00:47:36 EEST" duration-ms="1" status="PASS">
+        </test-method> <!-- verifyScrollUpWithoutArrowButton -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:testCases.TestCase26@6ed3ccb2]" started-at="2025-08-13T03:05:08 EEST" name="takeScreenShot" finished-at="2025-08-13T03:05:08 EEST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testAddRecommendedItemToCart status=SUCCESS method=TestCase22.testAddRecommendedItemToCart()[pri:0, instance:testCases.TestCase22@6ed3ccb2] output={null}]]]>
+                <![CDATA[[TestResult name=verifyScrollUpWithoutArrowButton status=SUCCESS method=TestCase26.verifyScrollUpWithoutArrowButton()[pri:0, instance:testCases.TestCase26@6ed3ccb2] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testCases.TestCase22@6ed3ccb2]" started-at="2025-08-13T00:47:36 EEST" name="closeBrowser" finished-at="2025-08-13T00:47:36 EEST" duration-ms="157" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testCases.TestCase26@6ed3ccb2]" started-at="2025-08-13T03:05:08 EEST" name="closeBrowser" finished-at="2025-08-13T03:05:08 EEST" duration-ms="99" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- testCases.TestCase22 -->
+      </class> <!-- testCases.TestCase26 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

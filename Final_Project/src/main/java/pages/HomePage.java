@@ -102,8 +102,36 @@ public class HomePage extends PageBase{
     public void clickViewCart() {
         wait.until(ExpectedConditions.elementToBeClickable(viewCartButton)).click();
     }
-	//
-	
+
+    @FindBy(xpath = "//h2[contains(text(),'Full-Fledged practice website for Automation Engineers')]")
+    WebElement topHeaderText;
+
+    @FindBy(xpath = "//h2[text()='Subscription']")
+    WebElement subscriptionSection;
+
+    @FindBy(id = "scrollUp")
+    WebElement scrollUpArrow;
+
+    public boolean isHomePageVisible() {
+        return topHeaderText.isDisplayed();
+    }
+
+    public void scrollToBottom() {
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
+    }
+
+    public boolean isSubscriptionVisible() {
+        return subscriptionSection.isDisplayed();
+    }
+
+    public void clickScrollUpArrow() {
+        scrollUpArrow.click();
+    }
+
+    public boolean isTopTextVisible() {
+        return topHeaderText.isDisplayed();
+    }
+    //
 	public void clickFirstViewProduct() {
 		wait.until(ExpectedConditions.visibilityOf(VuewProduct1));
 		VuewProduct1.click();
@@ -166,5 +194,9 @@ public class HomePage extends PageBase{
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", tshirtLink);
     }
 
+    
+    public void scrollToTop() {
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0)");
+    }
 	
 }

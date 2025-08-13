@@ -116,25 +116,51 @@ public class ProductPage extends PageBase {
     
     //ttt
     public void hoverAndAddToCart(int productIndex) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement product = productsList.get(productIndex);
-        Actions actions = new Actions(driver);
-        actions.moveToElement(product).perform();
-
-        wait.until(ExpectedConditions.elementToBeClickable(AddtoCart1));
-        AddtoCart1.click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         
+        // Wait for products page to load completely
+        wait.until(ExpectedConditions.visibilityOf(allProductsTitle));
+        wait.until(ExpectedConditions.visibilityOfAllElements(productsList));
+        
+        if (productIndex >= 0 && productIndex < productsList.size()) {
+            WebElement product = productsList.get(productIndex);
+            
+            // Scroll to the product with some offset
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center', inline: 'center'});", product);
+            
+            // Wait a bit for the scroll to complete
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+            
+            // Hover over the product
+            Actions actions = new Actions(driver);
+            actions.moveToElement(product).perform();
+            
+            // Wait a bit for hover effects to complete
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+            
+            // Try to find the add to cart button for this specific product
+            // Use a more specific selector that finds the button within the product container
+            String productSpecificXPath = String.format("(//div[@class='features_items']//div[@class='product-image-wrapper'])[%d]//a[contains(@class,'add-to-cart')]", productIndex + 1);
+            WebElement addToCartButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(productSpecificXPath)));
+            
+            // Use JavaScript click to avoid click interception issues
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", addToCartButton);
+        } else {
+            throw new IllegalArgumentException("Product index " + productIndex + " is out of range. Available products: " + productsList.size());
+        }
     }
-
+    
+    // Keep the old method name for backward compatibility with existing tests
     public void hoverAndAddToCart2(int productIndex) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement product = productsList.get(productIndex);
-        Actions actions = new Actions(driver);
-        actions.moveToElement(product).perform();
-
-        wait.until(ExpectedConditions.elementToBeClickable(AddtoCart2));
-        AddtoCart2.click();
-        
+        hoverAndAddToCart(productIndex);
     }
     
     
@@ -265,6 +291,26 @@ public class ProductPage extends PageBase {
                 System.out.println("Error getting brand " + (i + 1) + " info: " + e.getMessage());
             }
         }
+        System.out.println("===============================");
+    }
+    
+    // Method to get product count for debugging
+    public int getProductCount() {
+        return productsList.size();
+    }
+    
+    // Method to get add to cart button count for debugging
+    public int getAddToCartButtonCount() {
+        return addToCartButtons.size();
+    }
+    
+    // Debug method to print product information
+    public void printProductDebugInfo() {
+        System.out.println("=== Product Debug Information ===");
+        System.out.println("Products found: " + productsList.size());
+        System.out.println("Add to cart buttons found: " + addToCartButtons.size());
+        System.out.println("All Products title visible: " + allProductsTitle.isDisplayed());
+        System.out.println("===============================");
     }
     
 }

@@ -105,4 +105,44 @@ public class CheckoutPage extends PageBase{
         return orderSuccessMsg.isDisplayed();
     }
     
+    // Additional methods needed for TestCase24
+    
+    // Register/Login button on checkout page
+    @FindBy(xpath = "//a[contains(text(),'Register / Login')]")
+    private WebElement registerLoginButton;
+    
+    // Download Invoice button
+    @FindBy(xpath = "//a[contains(text(),'Download Invoice')]")
+    private WebElement downloadInvoiceButton;
+    
+    // Continue button after order
+    @FindBy(xpath = "//a[contains(text(),'Continue')]")
+    private WebElement continueAfterOrderButton;
+    
+    public void clickRegisterLoginButton() {
+        wait.until(ExpectedConditions.elementToBeClickable(registerLoginButton)).click();
+    }
+    
+    public void enterOrderComment(String comment) {
+        wait.until(ExpectedConditions.visibilityOf(commentTextArea));
+        commentTextArea.clear();
+        commentTextArea.sendKeys(comment);
+    }
+    
+    public void clickPayAndConfirmOrder() {
+        wait.until(ExpectedConditions.elementToBeClickable(payAndConfirmBtn)).click();
+    }
+    
+    public boolean isOrderSuccessMessageDisplayed() {
+        return wait.until(ExpectedConditions.visibilityOf(orderSuccessMsg)).isDisplayed();
+    }
+    
+    public void clickDownloadInvoice() {
+        wait.until(ExpectedConditions.elementToBeClickable(downloadInvoiceButton)).click();
+    }
+    
+    public void clickContinueAfterOrder() {
+        wait.until(ExpectedConditions.elementToBeClickable(continueAfterOrderButton)).click();
+    }
+    
 }
