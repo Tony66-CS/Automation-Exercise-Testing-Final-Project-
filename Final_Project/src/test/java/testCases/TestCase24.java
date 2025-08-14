@@ -39,7 +39,7 @@ public class TestCase24 extends TestBase {
         homePage.openProductPage();
         
         // Add debug information
-        productsPage.printProductDebugInfo();
+        //productsPage.printProductDebugInfo();
         
         // Add first product to cart
         productsPage.hoverAndAddToCart(0); // Add first product to cart

@@ -2,35 +2,117 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-13T03:04:46 EEST" name="Default suite" finished-at="2025-08-13T03:05:08 EEST" duration-ms="21633">
+  <suite started-at="2025-08-14T12:30:46 EEST" name="Default suite" finished-at="2025-08-14T12:33:08 EEST" duration-ms="142424">
     <groups>
     </groups>
-    <test started-at="2025-08-13T03:04:46 EEST" name="Default test" finished-at="2025-08-13T03:05:08 EEST" duration-ms="21633">
-      <class name="testCases.TestCase26">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:testCases.TestCase26@6ed3ccb2]" started-at="2025-08-13T03:04:46 EEST" name="openBrowser" finished-at="2025-08-13T03:05:03 EEST" duration-ms="16746" status="PASS">
+    <test started-at="2025-08-14T12:30:46 EEST" name="Default test" finished-at="2025-08-14T12:33:08 EEST" duration-ms="142424">
+      <class name="testCases.TestCase24">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:testCases.TestCase24@24269709]" started-at="2025-08-14T12:30:46 EEST" name="openBrowser" finished-at="2025-08-14T12:31:41 EEST" duration-ms="55521" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="verifyScrollUpWithoutArrowButton()[pri:0, instance:testCases.TestCase26@6ed3ccb2]" started-at="2025-08-13T03:05:03 EEST" name="verifyScrollUpWithoutArrowButton" finished-at="2025-08-13T03:05:08 EEST" duration-ms="4768" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyScrollUpWithoutArrowButton -->
-        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:testCases.TestCase26@6ed3ccb2]" started-at="2025-08-13T03:05:08 EEST" name="takeScreenShot" finished-at="2025-08-13T03:05:08 EEST" duration-ms="2" status="PASS">
+        <test-method signature="verifyCompleteOrderFlow(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TestCase24@24269709]" started-at="2025-08-14T12:31:41 EEST" name="verifyCompleteOrderFlow" data-provider="userDetails" finished-at="2025-08-14T12:33:08 EEST" duration-ms="86697" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyScrollUpWithoutArrowButton status=SUCCESS method=TestCase26.verifyScrollUpWithoutArrowButton()[pri:0, instance:testCases.TestCase26@6ed3ccb2] output={null}]]]>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[John]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[testuser1755163901747@mail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[TestPass123!]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[15]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[March]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[1990]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Doe]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Test Company]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[123 Main Street]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Apt 4B]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[United States]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[New York]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[NY]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[10001]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[5551234567]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCompleteOrderFlow -->
+        <test-method is-config="true" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:testCases.TestCase24@24269709]" started-at="2025-08-14T12:33:08 EEST" name="takeScreenShot" finished-at="2025-08-14T12:33:08 EEST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyCompleteOrderFlow status=SUCCESS method=TestCase24.verifyCompleteOrderFlow(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TestCase24@24269709] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShot -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testCases.TestCase26@6ed3ccb2]" started-at="2025-08-13T03:05:08 EEST" name="closeBrowser" finished-at="2025-08-13T03:05:08 EEST" duration-ms="99" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testCases.TestCase24@24269709]" started-at="2025-08-14T12:33:08 EEST" name="closeBrowser" finished-at="2025-08-14T12:33:08 EEST" duration-ms="158" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- testCases.TestCase26 -->
+      </class> <!-- testCases.TestCase24 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

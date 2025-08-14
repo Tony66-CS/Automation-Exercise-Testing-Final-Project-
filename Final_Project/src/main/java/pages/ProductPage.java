@@ -291,7 +291,6 @@ public class ProductPage extends PageBase {
                 System.out.println("Error getting brand " + (i + 1) + " info: " + e.getMessage());
             }
         }
-        System.out.println("===============================");
     }
     
     // Method to get product count for debugging
@@ -303,14 +302,5 @@ public class ProductPage extends PageBase {
     public int getAddToCartButtonCount() {
         return addToCartButtons.size();
     }
-    
-    // Debug method to print product information
-    public void printProductDebugInfo() {
-        System.out.println("=== Product Debug Information ===");
-        System.out.println("Products found: " + productsList.size());
-        System.out.println("Add to cart buttons found: " + addToCartButtons.size());
-        System.out.println("All Products title visible: " + allProductsTitle.isDisplayed());
-        System.out.println("===============================");
-    }
-    
+        
 }
